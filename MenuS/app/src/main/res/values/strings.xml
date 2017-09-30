@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MenuActiviy</string>
+    <string name="texto_agregar_platillo">Agregar platillo</string>
+    <string name="texto_mostrar_orden">Mostrar Orden</string>
+    <string-array name="menus">
+        <item >Desayuno</item>
+        <item >Comida</item>
+        <item >Cena</item>
+
+    </string-array>
+
+    <string-array name="menu_disponible">
+        <item >Huevos a la mexicana</item>
+        <item >Chilaquiles</item>
+        <item >Jugo de Naranja</item>
+        <item >Hotcakes</item>
+        <item >Crepas</item>
+        <item>Cóctel de Frutas</item>
+    </string-array>
+</resources>

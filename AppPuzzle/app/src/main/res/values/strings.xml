@@ -4,11 +4,11 @@
     <string name="texto_salir">Salir</string>
     <string-array name="opciones">
         <item>Seleccionar imagen...</item>
-        <item>Números</item>
+        <item>Dinosaurio</item>
         <item>Android</item>
         <item>Mario</item>
-        <item>Payaso</item>
-        <item>Favorita</item>
+        <item>Bichos</item>
+        <item>Mike and Dave</item>
         <item>Sombrerero</item>
     </string-array>
 

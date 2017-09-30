@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private int tipo;
     private int img;
     private PuzzleEstrategia juego;
-    private ImageButton[] imagenes;
+    private ImageButton[] imagenes= new ImageButton[16];
     private int disponible=15;//casilla disponible (tipo 2)
     private int pos1;//primera pieza seleccionada(tipo 1)
     private int pos2;//segunda pieza seleccionada
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void inicializarControles(){
-        imagenes= new ImageButton[16];
+        //imagenes= new ImageButton[16];
         imagenes[0]=(ImageButton)findViewById(R.id.button1);
         imagenes[1]=(ImageButton)findViewById(R.id.button2);
         imagenes[2]=(ImageButton)findViewById(R.id.button3);
@@ -75,12 +75,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnMezclar=(Button)findViewById(R.id.btn_mezclar);
         btnSalir=(Button)findViewById(R.id.btn_salir);
         cmbOpciones=(Spinner)findViewById(R.id.spn_opciones);
-        cmbTipos=(Spinner)findViewById(R.id.spn_tipo);
+        cmbTipos=(Spinner)findViewById(R.id.spn_tipos);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(parent.getId()==R.id.spn_tipo){
+        if(parent.getId()==R.id.spn_tipos){
             tipo=(int)cmbTipos.getSelectedItemId();
             switch (tipo){
                 case 1:
@@ -108,22 +108,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void cargarImagenes(int img){
         switch (img){
             case 1:
-                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.n1));
-                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.n2));
-                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.n3));
-                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.n4));
-                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.n5));
-                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.n6));
-                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.n7));
-                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.n8));
-                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.n9));
-                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.n10));
-                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.n11));
-                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.n12));
-                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.n13));
-                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.n14));
-                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.n15));
-                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.n16));
+                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_1));
+                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_2));
+                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_3));
+                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_4));
+                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_5));
+                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_6));
+                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_7));
+                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_8));
+                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_9));
+                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_10));
+                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_11));
+                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_12));
+                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_13));
+                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_14));
+                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_15));
+                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.d_16));
                 break;
             case 2:
                 imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.a1));
@@ -162,40 +162,40 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.m16));
                 break;
             case 4:
-                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.p1));
-                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.p2));
-                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.p3));
-                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.p4));
-                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.p5));
-                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.p6));
-                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.p7));
-                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.p8));
-                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.p9));
-                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.p10));
-                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.p11));
-                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.p12));
-                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.p13));
-                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.p14));
-                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.p15));
-                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.p16));
+                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_1));
+                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_2));
+                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_3));
+                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_4));
+                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_5));
+                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_6));
+                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_7));
+                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_8));
+                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_9));
+                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_10));
+                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_11));
+                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_12));
+                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_13));
+                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_14));
+                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_15));
+                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.b_16));
                 break;
             case 5:
-                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.f1));
-                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.f2));
-                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.f3));
-                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.f4));
-                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.f5));
-                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.f6));
-                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.f7));
-                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.f8));
-                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.f9));
-                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.f10));
-                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.f11));
-                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.f12));
-                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.f13));
-                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.f14));
-                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.f15));
-                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.f16));
+                imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_1));
+                imagenes[1].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_2));
+                imagenes[2].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_3));
+                imagenes[3].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_4));
+                imagenes[4].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_5));
+                imagenes[5].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_6));
+                imagenes[6].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_7));
+                imagenes[7].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_8));
+                imagenes[8].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_9));
+                imagenes[9].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_10));
+                imagenes[10].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_11));
+                imagenes[11].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_12));
+                imagenes[12].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_13));
+                imagenes[13].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_14));
+                imagenes[14].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_15));
+                imagenes[15].setBackgroundDrawable(getResources().getDrawable(R.drawable.m_16));
                 break;
             case 6:
                 imagenes[0].setBackgroundDrawable(getResources().getDrawable(R.drawable.s1));

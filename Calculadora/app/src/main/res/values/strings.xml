@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculadora Soria</string>
+    <string name="txt_num1">Número 1:</string>
+    <string name="txt_num2">Número 2:</string>
+    <string-array name="opciones">
+        <item>Normal</item>
+        <item>Científica</item>
+
+    </string-array>
+    <string name="txt_tipo">Tipo calculadora:</string>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TelefoniaStrategy Soria</string>
+    <string name="texto_minutos_local">Minutos Local:</string>
+    <string name="texto_minutos_ld">Minutos Larga Distancia:</string>
+    <string name="texto_compania">Compañía:</string>
+    <string name="texto_calcular">Calcular</string>
+    <string name="texto_total">Total:</string>
+    <string name="texto_limpiar">Limpiar</string>
+    <string name="texto_mostrar_creditos">Mostrar Créditos</string>
+    <string name="texto_nombre">Diana Soria</string>
+    <string name="texto_grupo">GSI1341</string>
+    <string name="texto_asignatura">Desarrollo de aplicaciones II</string>
+    <string-array name="opciones">
+        <item>Telcel</item>
+        <item>Unefon</item>
+        <item>My Compamy</item>
+    </string-array>
+</resources>
