@@ -79,7 +79,7 @@ public class ActoDOM {
         }
     }
 
-    public Acto finById(String id) {
+    public Acto findById(String id) {
         Acto act = null;
         try {
             Document d = DOMHelper.getDocument(pathFile);

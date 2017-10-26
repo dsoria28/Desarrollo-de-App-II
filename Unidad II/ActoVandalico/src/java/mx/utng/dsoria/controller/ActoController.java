@@ -55,7 +55,7 @@ public class ActoController extends HttpServlet {
         } else if (request.getParameter("btn_editar") != null) {
             try {
                 String id = request.getParameter("id");
-                acto = actoDOM.finById(id);
+                acto = actoDOM.findById(id);
             } catch (IndexOutOfBoundsException e) {
                 acto = new Acto();
             }
