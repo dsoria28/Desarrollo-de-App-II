@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Ver medallistas</title>
+    </h:head>
+    <h:body>
+        <h:form id="verMedallista">
+            <p:panel header="Medallistas Registrados:">
+                <p:dataTable id="tabla" value="#{medallistaBean1.listaMed}" var="med" paginator="true" rows="5" rowsPerPageTemplate="5">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{med.id}"/>
+                    </p:column>
+                    <p:column headerText="Nombre">
+                        <h:outputText value="#{med.nombre}"/>
+                    </p:column>
+                    <p:column headerText="Disciplina">
+                        <h:outputText value="#{med.disciplina}"/>
+                    </p:column>
+                    <p:column headerText="Categoria">
+                        <h:outputText value="#{med.categoria}"/>
+                    </p:column>
+                    <p:column headerText="Disciplina">
+                        <h:outputText value="#{med.disciplina}"/>
+                    </p:column>
+                    <p:column headerText="Medalla: ">
+                        <h:outputText value="#{med.medalla}"/>
+                    </p:column>
+                    <p:column headerText="Pais: ">
+                        <h:outputText value="#{med.pais}"/>
+                    </p:column>
+                    <p:column headerText="Evento: ">
+                        <h:outputText value="#{med.evento}"/>
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

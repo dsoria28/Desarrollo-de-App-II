@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Medallistas</title>
+    </h:head>
+    <h:body>
+        <h:form id="FormMedallista">
+            <p:growl/>
+            <p:panel header="Formulario Ingreso Producto: " footer="Autor: Diana Soria">
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="Nombre: " for="nombre"/>
+                    <p:inputText id="nombre" value="#{medallistaBean1.nombre}" required="true"/>
+                    <p:message for="nombre"/>
+                    <h:outputLabel value="Disciplina: " for="disciplina"/>
+                    <p:inputText id="disciplina" value="#{medallistaBean1.disciplina}" required="true"/>
+                    <p:message for="disciplina"/>
+                    <h:outputLabel value="Categoria: " for="nombre"/>
+                    <p:inputText id="categoria" value="#{medallistaBean1.categoria}" required="true"/>
+                    <p:message for="categoria"/>
+                    <h:outputLabel value="Medalla: " for="nombre"/>
+                    <p:inputText id="medalla" value="#{medallistaBean1.medalla}" required="true"/>
+                    <p:message for="medalla"/>
+                    <h:outputLabel value="Pais: " for="nombre"/>
+                    <p:inputText id="pais" value="#{medallistaBean1.pais}" required="true"/>
+                    <p:message for="pais"/>
+                    <h:outputLabel value="Evento: " for="nombre"/>
+                    <p:inputText id="evento" value="#{medallistaBean1.evento}" required="true"/>
+                    <p:message for="evento"/>
+                    <h:panelGroup />
+                    <p:commandButton id="bt" ajax="false" action="#{medallistaBean1.agregarMedallista()}" value="Guardar" icon="ui-icon-disk"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+        <h:outputText value="&lt;br/&gt;" escape="false"/>
+        <h:outputText value="&lt;bt/&gt;" escape="false"/>
+        <h:form>
+            <p:panel header="Buscar Producto: " footer="Autor Diana Soria">
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="Id: " for="id"/>
+                    <p:inputText id="id" value="#{medallistaBean1.id}" required="true" size="20"/>
+                    <p:message for="id"/>
+                    <h:panelGroup />
+                    <p:commandButton id="bt2" ajax="false" action="#{medallistaBean1.buscarMedallista()}" value="Buscar" icon="ui-icon-search"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+        <h:outputText value="&lt;br/&gt;" escape="false"/>
+        <h:outputText value="&lt;bt/&gt;" escape="false"/>
+        <h:form id="verMedallista">
+            <p:panel header="Medallistas Registrados:">
+                <p:dataTable id="tabla" value="#{medallistaBean1.listaMed}" var="med" >
+                    <p:column headerText="Id">
+                        <h:outputText value="#{med.id}"/>
+                    </p:column>
+                    <p:column headerText="Nombre">
+                        <h:outputText value="#{med.nombre}"/>
+                    </p:column>
+                    <p:column headerText="Disciplina">
+                        <h:outputText value="#{med.disciplina}"/>
+                    </p:column>
+                    <p:column headerText="Categoria">
+                        <h:outputText value="#{med.categoria}"/>
+                    </p:column>
+                    <p:column headerText="Disciplina">
+                        <h:outputText value="#{med.disciplina}"/>
+                    </p:column>
+                    <p:column headerText="Medalla: ">
+                        <h:outputText value="#{med.medalla}"/>
+                    </p:column>
+                    <p:column headerText="Pais: ">
+                        <h:outputText value="#{med.pais}"/>
+                    </p:column>
+                    <p:column headerText="Evento: ">
+                        <h:outputText value="#{med.evento}"/>
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

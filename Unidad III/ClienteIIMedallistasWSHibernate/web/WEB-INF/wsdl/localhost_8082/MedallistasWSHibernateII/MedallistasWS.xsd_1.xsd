@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://webservices.services.dsoria.utng/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.services.dsoria.utng/">
+
+<xs:element name="BuscarMedallista" type="tns:BuscarMedallista" />
+
+<xs:element name="BuscarMedallistaResponse" type="tns:BuscarMedallistaResponse" />
+
+<xs:element name="ConsultarMedallistas" type="tns:ConsultarMedallistas" />
+
+<xs:element name="ConsultarMedallistasResponse" type="tns:ConsultarMedallistasResponse" />
+
+<xs:element name="IngresarMedallista" type="tns:IngresarMedallista" />
+
+<xs:element name="IngresarMedallistaResponse" type="tns:IngresarMedallistaResponse" />
+
+<xs:complexType name="ConsultarMedallistas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="ConsultarMedallistasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tbMedallistas" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tbMedallistas">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0" />
+<xs:element name="disciplina" type="xs:string" minOccurs="0" />
+<xs:element name="evento" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="medalla" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="pais" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarMedallista">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="disciplina" type="xs:string" minOccurs="0" />
+<xs:element name="categoria" type="xs:string" minOccurs="0" />
+<xs:element name="medalla" type="xs:string" minOccurs="0" />
+<xs:element name="pais" type="xs:string" minOccurs="0" />
+<xs:element name="evento" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarMedallistaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarMedallista">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarMedallistaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
